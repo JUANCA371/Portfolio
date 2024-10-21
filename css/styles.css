@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-item img {
+    height: 500px;
+    object-fit: cover; /* Recorta la imagen para que se ajuste sin deformarla */
+    width: 100%; /* Asegura que las imágenes se expandan al ancho completo */
+  }
+
+  .carousel {
+    height: 200px;
+  }
+  
+  .carousel-item {
+    height: 500px;
+  }
+  
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover; /* Mantiene el aspecto visual sin deformación */
+    width: 100%;
+  }
+  
+  .carousel-item img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  
