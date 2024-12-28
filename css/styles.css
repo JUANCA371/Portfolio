@@ -40,10 +40,11 @@ body {
 /* Hero general */
 #hero {
     position: relative;
-    background-image: url('../assets/IMG/imagenHero.jpg'); /* Ruta de tu imagen */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+    background-image: url(../assets/IMG/imagenHero.jpg); /* Ruta de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita la imagen */
+    height: 100vh; /* Altura de la pantalla */
     color: white; /* Texto blanco por defecto */
     display: flex;
     flex-direction: column;
@@ -69,8 +70,10 @@ body {
     position: relative;
     z-index: 2;
     color: white; /* Asegura que todo el texto sea blanco */
+   
 }
 
+/* Títulos */
 #hero h1 {
     font-size: 2.5rem; /* Tamaño del título ajustado */
     font-weight: bold;
@@ -82,6 +85,7 @@ body {
     margin-bottom: 20px; /* Espaciado con respecto a los botones */
 }
 
+/* Botones */
 #hero a {
     display: inline-block; /* Asegura que se muestren como botones */
     margin: 5px; /* Espaciado entre botones */
@@ -100,14 +104,46 @@ body {
     color: #257180; /* Cambia al color principal */
 }
 
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 1.8rem; /* Ajusta el tamaño del título */
+    }
+
+    #hero h5 {
+        font-size: 1rem; /* Ajusta el tamaño del subtítulo */
+    }
+
+    #hero a {
+        font-size: 0.9rem; /* Ajusta el tamaño de los botones */
+        padding: 8px 15px; /* Ajusta el tamaño de los botones */
+    }
 
 
-img {
-    width: 120px;
-    height: 80px;
+/* Asegura que el logo no sea más grande que lo necesario */
+#hero img {
+    width: 100%; /* Asegura que el logo ocupe un porcentaje del espacio disponible */
+    max-width: 150px; /* Limita el tamaño máximo del logo */
+    height: auto; /* Mantiene la proporción del logo */
+    object-fit: contain; /* Evita que el logo se distorsione */
 }
 
-.logo {
-    width: 150px;
-    height: auto;
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    #hero img {
+        max-width: 100px; /* Reduzco el tamaño máximo del logo en pantallas pequeñas */
+    }
 }
+
+/* Contenedor del Hero */
+#hero {
+    display: flex;
+    justify-content: center;   /* Centra el logo horizontalmente */
+    align-items: center;       /* Centra el logo verticalmente */
+    text-align: center;
+    padding: 0 20px;
+    height: 100vh;             /* Asegura que el Hero tenga una altura completa de la ventana */
+}
+
+
+
